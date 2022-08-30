@@ -1,0 +1,128 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "5idsiq5fewftd"
+  },
+  "info": {
+    "title": "stoplight-demo",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/users/{userId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "integer"
+          },
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "description": "Id of an existing user."
+        }
+      ],
+      "get": {
+        "summary": "Get User Info by User ID",
+        "tags": [],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/UserSingle"
+          }
+        },
+        "operationId": "get-users-userId",
+        "description": "Retrieve the information of the user with the matching user ID."
+      }
+    },
+    "/user": {
+      "post": {
+        "summary": "Create New User",
+        "operationId": "post-user",
+        "description": "Create a new user.",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/UserSingle"
+        },
+        "responses": {
+          "201": {
+            "$ref": "#/components/responses/UserSingle"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "InsideUser": {
+        "title": "insideUser",
+        "x-stoplight": {
+          "id": "5v8ujh3bsqfhw"
+        },
+        "type": "object",
+        "description": "Test model that will be referenced only in the User model",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "User": {
+        "title": "User",
+        "x-stoplight": {
+          "id": "j5r6ump5g1q3y"
+        },
+        "type": "object",
+        "description": "Test external model",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "externalModel": {
+            "$ref": "#/components/schemas/InsideUser"
+          }
+        }
+      }
+    },
+    "responses": {
+      "UserSingle": {
+        "description": "Example response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "UserSingle": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
