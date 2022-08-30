@@ -1,0 +1,19 @@
+{
+  "title": "User",
+  "x-stoplight": {
+    "id": "j5r6ump5g1q3y"
+  },
+  "type": "object",
+  "description": "Test external model",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "externalModel": {
+      "$ref": "./insideUser.json"
+    }
+  }
+}
