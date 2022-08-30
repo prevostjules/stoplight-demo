@@ -6,7 +6,7 @@ The 'bundled' directory contains the result of multiple bundling using different
 
 - bundledWithExportButton.json => done by hitting the 'Export' button on [Stoplight Project](https://jules-prevost.stoplight.io/docs/stoplight-demo/5idsiq5fewftd-stoplight-demo)
 
-- bundledWithJsonRefParser.json / bundledWithStoplightParser.json / bundledWithSwaggerParser.json => Done with multiple bundler using the command `npm run bundle`
+- bundledWithJsonRefParser.json / bundledWithStoplightParser.json / bundledWithSwaggerParser.json => Done with multiple bundler using the command `npm run bundle` This command iterates over multiple bundler, passing to them the same openapi schema and saving the bundle into a file.
 
 - bundledWithSwaggerCli.json => done by playing this command in the terminal `swagger-cli bundle './reference/stoplight-demo.json' -o './bundled/bundledWithSwaggerCli.json'
   ` 
