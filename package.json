@@ -4,6 +4,7 @@
   "description": "Demo project to highlight bundle differences between Stoplight 'export' button and swagger-cli bundle method",
   "main": "index.js",
   "scripts": {
+    "bundle": "node ./scripts/bundleWithSeveralBundler.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
