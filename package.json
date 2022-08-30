@@ -1,0 +1,24 @@
+{
+  "name": "stoplight-demo",
+  "version": "1.0.0",
+  "description": "Demo project to highlight bundle differences between Stoplight 'export' button and swagger-cli bundle method",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prevostjules/stoplight-demo.git"
+  },
+  "author": "Jules Prévost",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prevostjules/stoplight-demo/issues"
+  },
+  "homepage": "https://github.com/prevostjules/stoplight-demo#readme",
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.0.9",
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "@stoplight/json-schema-ref-parser": "^9.2.2"
+  }
+}
